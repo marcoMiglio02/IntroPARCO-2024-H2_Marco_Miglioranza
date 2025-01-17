@@ -66,6 +66,7 @@ cd IntroPARCO-2024-H2_Marco_Miglioranza/code/
 
 # Excute the PBS file
 qsub test.pbs
+
 ```
 #### Compilation without PBS file:
 ```bash
@@ -81,6 +82,7 @@ mpicxx -O3 -march=native -mtune=native -funroll-loops -o code main.cpp MPI_opera
 # Compile the old OpenMP implementation
 cd ../H1/
 g++ -O2 -march=native -ffast-math -fopenmp -funroll-loops -o es es.cpp
+
 ```
 #### Execution:
 
