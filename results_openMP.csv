@@ -1,0 +1,170 @@
+Try,Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,64,4096,0.027577,0.00599004
+2,64,4096,0.00400103,0.00362165
+3,64,4096,0.00370319,0.00324895
+4,64,4096,0.00356335,0.00324617
+5,64,4096,0.00349298,0.00309463
+6,64,4096,0.00353181,0.00304691
+7,64,4096,0.00345677,0.00277821
+8,64,4096,0.00345847,0.00290871
+9,64,4096,0.00345985,0.00314096
+10,64,4096,0.00337161,0.00284688
+11,64,4096,0.00338855,0.00278597
+12,64,4096,0.00350119,0.00287667
+13,64,4096,0.00348892,0.0027413
+14,64,4096,0.00349996,0.00293381
+15,64,4096,0.00345473,0.00284943
+16,64,4096,0.00350441,0.00277255
+17,64,4096,0.00347055,0.00284469
+18,64,4096,0.00349046,0.00291948
+19,64,4096,0.00345084,0.00281862
+20,64,4096,0.0034878,0.00278762
+21,64,4096,0.00321431,0.00280429
+22,64,4096,0.00328076,0.00264048
+23,64,4096,0.00328887,0.00275118
+24,64,4096,0.00333904,0.00284965
+25,64,4096,0.00334976,0.00275681
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,16,3.13244e-06,3.13528e-06
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,32,3.98052e-06,3.74016e-06
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,64,5.03932e-06,3.20216e-06
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,128,4.07172e-05,2.05208e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,256,0.000154251,7.35252e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,512,0.000461992,0.000189469
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,1024,0.00156197,0.000627625
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,2048,0.0203835,0.00804546
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,4096,0.117406,0.0579628
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,16,1.84168e-05,1.62003e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,32,2.08921e-05,1.46999e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,64,3.08763e-05,1.87855e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,128,5.40544e-05,2.44833e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,256,9.50842e-05,4.6699e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,512,0.000276011,0.000120689
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,1024,0.000877984,0.000395966
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,2048,0.00542359,0.00518224
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,4096,0.0356745,0.0274386
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,16,4.33747e-05,5.10998e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,32,4.02952e-05,6.00513e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,64,5.16125e-05,7.32665e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,128,3.60488e-05,7.89741e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,256,6.26787e-05,6.92641e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,512,0.000134473,7.02e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,1024,0.000397294,0.000188002
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,2048,0.00138665,0.00165114
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,4096,0.00954057,0.00808886
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,16,0.000147155,0.000192921
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,32,0.000127941,0.000217336
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,64,0.000141278,0.000312083
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,128,0.000110266,0.000317579
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,256,0.000483596,0.000311109
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,512,0.000202398,0.000306104
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,1024,0.000250898,0.000373546
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,2048,0.00111001,0.00069854
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,4096,0.00422215,0.00310976
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,16,2.47916e-06,2.44836e-06
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,32,3.26136e-06,3.05744e-06
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,64,5.97332e-06,3.72676e-06
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,128,2.02152e-05,1.03701e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,256,6.34588e-05,2.84495e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,512,0.000337153,0.000136391
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,1024,0.00142157,0.000580659
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,2048,0.0241591,0.00932426
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+1,4096,0.140772,0.061553
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,16,1.7202e-05,1.64453e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,32,1.51725e-05,1.51142e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,64,2.58851e-05,1.80729e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,128,5.35765e-05,2.58043e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,256,0.000101518,5.02883e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,512,0.000284472,0.000126792
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,1024,0.000989891,0.000376896
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,2048,0.00539122,0.00484364
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+4,4096,0.0303639,0.0253064
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,16,3.22991e-05,4.71252e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,32,2.22187e-05,5.8492e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,64,2.66909e-05,6.7412e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,128,3.14108e-05,7.21324e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,256,5.98871e-05,6.66796e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,512,0.000134509,7.2928e-05
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,1024,0.000367869,0.000217424
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,2048,0.00132166,0.00155467
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+16,4096,0.0089141,0.00792977
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,16,9.41462e-05,0.000202899
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,32,9.43571e-05,0.000202757
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,64,7.74406e-05,0.000238611
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,128,8.17158e-05,0.000263683
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,256,8.4968e-05,0.000303351
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,512,0.000111015,0.000299024
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,1024,0.000240949,0.000350125
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,2048,0.000659941,0.000556536
+Threads,Matrix Size,Transpose Time,Check Symmetry Time
+64,4096,0.00416866,0.00290759
