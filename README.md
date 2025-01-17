@@ -1,24 +1,37 @@
 # High Performance Matrix Operations: MPI Implementation
 
 ## Overview
-This project implements and optimizes matrix operations, specifically matrix transposition and symmetry verification, using Message Passing Interface (MPI). It evaluates and compares the efficiency of MPI-based parallelization with OpenMP and sequential methods. The focus is on leveraging parallel computing to achieve significant performance improvements in scientific and high-performance computing environments.
+This project implements and optimizes matrix operations, specifically matrix transposition and symmetry verification, using Message Passing Interface (MPI). It evaluates and compares the efficiency of MPI-based parallelization with OpenMP and sequential methods from the previous project [GitHub Repository](https://github.com/marcoMiglio02/IntroPARCO-2024-H2_Marco_Miglioranza).
+---
+
+## **Contents**
+
+1. **Introduction**
+2. **Methodology**
+3. **Algorithms**
+4. **Optimizations**
+5. **Performance Analysis**
+6. **Key Findings**
+7. **How to Run the Code**
+8. **Conclusion**
+
+---
 
 ## Contents
 
 ### 1. Introduction
-Matrix transposition and symmetry verification are critical operations in various computational fields, including robotics, physics, machine learning, and data processing. This project explores explicit parallelization techniques using MPI to accelerate these operations and provides a detailed performance analysis to identify the best approaches for different matrix sizes and system configurations.
+Matrix transposition and symmetry verification are critical operations. This project explores explicit parallelization techniques using MPI to accelerate these operations and provides a detailed performance analysis to identify the best approaches for different matrix sizes and system configurations.
 
 ### 2. Methodology
 #### Computational Environment:
-- **CPU**: Intel Xeon Gold 6252N with 96 logical CPUs.
+- **CPU**: Intel Xeon Gold 6252N.
 - **Technologies**:
   - MPI for explicit parallelization.
   - OpenMP and sequential implementations for comparison.
-- **Compiler**: GNU Compiler Collection (g++) with optimization flags.
+- **Compiler**: GNU Compiler Collection (g++) and MPICH.
 
 #### Tools and Libraries:
 - MPI (Message Passing Interface).
-- Performance monitoring tools for benchmarking and analysis.
 
 #### Algorithms:
 1. **Sequential Implementation**:
@@ -28,6 +41,22 @@ Matrix transposition and symmetry verification are critical operations in variou
    - Parallel matrix transposition (`matTransposeMPI`).
    - Symmetry verification (`checkSymMPI`).
    - Optional block-based matrix transposition (`matTransposeBlockMPI`).
+
+
+
+## **Performance Analysis**
+
+The performance of the implementations was compared using matrices of varying sizes:
+
+- **Metrics:**
+  - Execution time
+  - Speedup
+  - Scalability
+- **Results:**
+  - MPI showed better scalability for larger matrices, especially on distributed systems.
+  - OpenMP outperformed MPI for small matrices due to lower communication overhead.
+
+  
 
 ### 3. How to Run the Code
 #### Compilation:
