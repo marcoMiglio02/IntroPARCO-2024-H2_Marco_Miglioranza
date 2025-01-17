@@ -62,7 +62,7 @@ Ensure that the system supports MPI and that the necessary libraries are install
 git clone https://github.com/marcoMiglio02/IntroPARCO-2024-H2_Marco_Miglioranza.git
 
 # Navigate to the code directory
-cd IntroPARCO-2024-H2_Marco_Miglioranza/report/
+cd IntroPARCO-2024-H2_Marco_Miglioranza/code/
 
 # Excute the PBS file
 qsub test.pbs
@@ -73,7 +73,7 @@ qsub test.pbs
 git clone https://github.com/marcoMiglio02/IntroPARCO-2024-H2_Marco_Miglioranza.git
 
 # Navigate to the code directory
-cd IntroPARCO-2024-H2_Marco_Miglioranza/report/code/H2
+cd IntroPARCO-2024-H2_Marco_Miglioranza/code/H2
 
 # Compile the MPI implementation
 mpicxx -O3 -march=native -mtune=native -funroll-loops -o code main.cpp MPI_operation.cpp file_operation.cpp serial_operation.cpp
