@@ -1,0 +1,58 @@
+#!/bin/bash
+# Job name PBS -N matrix_transpose_job
+# Output files
+#PBS -o ./matrix_transpose_job_output.o
+#PBS -e ./matrix_transpose_job_error.e
+#Queue name
+#PBS -q short_cpuQ
+# Set the maximum wall time
+#PBS -l walltime=01:00:00
+#Number of nodes, cpus, mpi processors and amount of memory
+#PBS -l select=1:ncpus=64:mpiprocs=64:mem=1mb:host=hpc-c12-node03
+# Modules for python and MPI
+module load gcc91
+module load mpich-3.2.1--gcc-9.1.0
+
+g++() {
+    g++-9.1.0 "$@"
+}
+
+g++ --version
+# Print the name of the file that contains the list of the nodes assigned to the job and list all the nodes
+NODES=$(cat $PBS_NODEFILE)
+echo The running nodes are $NODES
+# Get the list of unique nodes assigned to the job
+NODES=$(sort -u $PBS_NODEFILE)
+echo The running nodes are $NODES
+# Loop through each node and get architecture information
+for NODE in $NODES; do
+    echo "Node: $NODE"
+    ssh $NODE "lscpu"
+done
+# Select the working directory
+cd $PBS_O_WORKDIR
+pwd
+cd H2/
+# the code should be previously compiled
+mpicxx -O3 -march=native -mtune=native -funroll-loops -o code main.cpp MPI_operation.cpp file_operation.cpp serial_operation.cpp
+
+# Run the code
+nElements=(16 32 64 128 256 512 1024 2048 4096)
+nProcs=(1 2 4 8 16 32 64)
+nProcsOpenMP=(1 4 16 64)
+
+for procs in "${nProcs[@]}"; do
+	for elems in "${nElements[@]}"; do
+		mpirun -np $procs ./code $elems 25
+	done
+done
+cd ../H1/
+g++ -O2 -march=native -ffast-math -fopenmp -funroll-loops -o es es.cpp
+for procs in "${nProcsOpenMP[@]}"; do
+	for elems in "${nElements[@]}"; do
+		./es $elems $procs 25
+	done
+done
+
+# If you set the number of mpi processors, here it is enough to type mpirun ./code.out
+
