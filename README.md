@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a continuation of the previous Project [LINK] and implements and optimizes matrix operations, such as matrix transposition and symmetry verification by using Message Passing Interface (MPI). It evaluates and compares the efficiency of MPI-based parallelization with OpenMP and sequential methods. 
+This project is a continuation of the previous [Project](https://github.com/marcoMiglio02/IntroPARCO-2024-H1_Marco_Miglioranza) and implements and optimizes matrix operations, such as matrix transposition and symmetry verification by using Message Passing Interface (MPI). It evaluates and compares the efficiency of MPI-based parallelization with OpenMP and sequential methods. 
 
 
 ---
@@ -14,6 +14,8 @@ This project is a continuation of the previous Project [LINK] and implements and
 3. **Algorithms**
 4. **How to run the code**
 5. **Performance Analysis**
+6. **Results**
+7. **Conclusion**
 
 ---
 
@@ -115,11 +117,11 @@ Run the program with varying numbers of threads (OpenMP Implementation):
 3. **Sequential**:
    - Inefficient for large matrices, but useful as a baseline for comparisons.
 
-### 5. Results
+### 6. Results
 
-Performance results for matrix sizes ranging from  to  are presented in the full report.
+Performance results for matrix sizes ranging from 16x16 to 4096x4096 are presented in the full report.
 
-### 6. Conclusion
+### 7. Conclusion
 
 This project demonstrated the effectiveness of MPI for parallelizing matrix operations, particularly for large matrices. It highlights the complementary strengths of MPI and OpenMP, with MPI excelling in distributed environments and OpenMP providing efficient solutions for shared memory systems.
 
