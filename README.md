@@ -13,6 +13,7 @@ This project is a continuation of the previous Project [LINK] and implements and
 2. **Methodology**
 3. **Algorithms**
 4. **How to run the code**
+5. **Performance Analysis**
 
 ---
 
@@ -32,7 +33,7 @@ Matrix transposition and symmetry verification are critical operations. This pro
 
 
 
-### Algorithms:
+### 3. Algorithms:
 
 1. **Sequential Implementation**:
    - Baseline for comparison.
@@ -42,7 +43,7 @@ Matrix transposition and symmetry verification are critical operations. This pro
    - Symmetry verification (`checkSymMPI`).
    - Optional block-based matrix transposition (`matTransposeBlockMPI`).
 
-### 3. How to Run the Code
+### 4. How to Run the Code
 
 #### **Dependencies**
 
@@ -73,18 +74,29 @@ git clone https://github.com/marcoMiglio02/IntroPARCO-2024-H2_Marco_Miglioranza.
 cd IntroPARCO-2024-H2_Marco_Miglioranza/report/code/H2
 
 # Compile the MPI implementation
-qsub test.pbs
+mpicxx -O3 -march=native -mtune=native -funroll-loops -o code main.cpp MPI_operation.cpp file_operation.cpp serial_operation.cpp
+
+# Compile the old OpenMP implementation
+cd ../H1/
+g++ -O2 -march=native -ffast-math -fopenmp -funroll-loops -o es es.cpp
 ```
 #### Execution:
 
-Run the program with varying numbers of processes:
+Run the program with varying numbers of processes (MPI Implementation):
 
 ```bash
-# Execute with 4 processes
-mpirun -np 4 ./matrix_ops
+# From the directory H2 where there is the MPI implementation
+mpirun -np <num_processes> ./code <size_matrix> <tries>
 ```
 
-### 4. Performance Analysis
+Run the program with varying numbers of threads (OpenMP Implementation):
+
+```bash
+# From the directory H1 where there is the OpenMP implementation
+./es <size_matrix> <num_threads> <tries>
+```
+
+### 5. Performance Analysis
 
 #### Metrics Evaluated:
 
@@ -96,19 +108,20 @@ mpirun -np 4 ./matrix_ops
 
 1. **MPI**:
    - Superior scalability for large matrices due to distributed memory architecture.
-   - Effective in reducing computation time with an increasing number of processors.
+   - Effective in reducing computation time with an increasing number of processors if not calculated the required time on Message passing between processes.
 2. **OpenMP**:
    - Optimal for medium-sized matrices due to shared memory advantages.
+   - The best solution if code is inside in only one node
 3. **Sequential**:
    - Inefficient for large matrices, but useful as a baseline for comparisons.
 
 ### 5. Results
 
-Performance results for matrix sizes ranging from  to  are presented in the full report. Comparative graphs illustrate the speedup and efficiency of MPI, OpenMP, and sequential approaches.
+Performance results for matrix sizes ranging from  to  are presented in the full report.
 
 ### 6. Conclusion
 
-This project demonstrated the effectiveness of MPI for parallelizing matrix operations, particularly for large matrices. It highlights the complementary strengths of MPI and OpenMP, with MPI excelling in distributed environments and OpenMP providing efficient solutions for shared memory systems. The findings contribute to advancements in high-performance computing for dense matrix operations.
+This project demonstrated the effectiveness of MPI for parallelizing matrix operations, particularly for large matrices. It highlights the complementary strengths of MPI and OpenMP, with MPI excelling in distributed environments and OpenMP providing efficient solutions for shared memory systems.
 
 ## GIT Repository
 
