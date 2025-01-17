@@ -135,5 +135,5 @@ This project demonstrated the effectiveness of MPI for parallelizing matrix oper
 
 ---
 
-For more details on the implementation and analysis, please refer to the [full report](https://github.com/marcoMiglio02/IntroPARCO-2024-H2_Marco_Miglioranza/blob/main/report.pdf).
+For more details on the implementation and analysis, please refer to the [full report](https://github.com/marcoMiglio02/IntroPARCO-2025-H2_Marco_Miglioranza/blob/32a56a07b59da3a7ddfcd87cc72f71b29e29550f/Marco_Miglioranza_Report_H2.pdf).
 
